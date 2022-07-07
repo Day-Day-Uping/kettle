@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.kettle</groupId>
+    <artifactId>mykettle</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>mykettle</name>
+    <description>mykettle</description>
+
+
+    <properties>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <spring-boot.version>2.3.7.RELEASE</spring-boot.version>
+        <java.home>C:\Program Files\Java\jdk1.8.0_261</java.home>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- mybatis -->
+<!--        <dependency>-->
+<!--            <groupId>org.mybatis.spring.boot</groupId>-->
+<!--            <artifactId>mybatis-spring-boot-starter</artifactId>-->
+<!--            <version>1.3.2</version>-->
+<!--        </dependency>-->
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+            <version>8.0.22</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+
+
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!--IBM DB2 Driver-->
+        <dependency>
+            <groupId>com.ibm.db2</groupId>
+            <artifactId>jcc</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!--        本地-->
+
+        <dependency>
+            <groupId>org.pentaho.di</groupId>
+            <artifactId>kettle-core</artifactId>
+            <version>8.2.0.0-342</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/kettle-core-8.2.0.0-342.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.pentaho.di</groupId>
+            <artifactId>kettle-engine</artifactId>
+            <version>8.2.0.0-342</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/kettle-engine-8.2.0.0-342.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>org.pentaho.metastore</groupId>
+            <artifactId>metastore</artifactId>
+            <version>8.2.0.0-342</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/metastore-8.2.0.0-342.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-vfs2</artifactId>
+            <version>2.2</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/commons-vfs2-2.2.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>1.1.3</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/commons-logging-1.1.3.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.2</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/commons-io-2.2.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>kettle.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>17.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/guava-17.0.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.ibm</groupId>
+            <artifactId>db2jcc4</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/db2jcc4.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.3.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/commons-lang3-3.0.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>2.6</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/commons-lang-2.6.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.10</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/commons-codec-1.10.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.kettle</groupId>
+            <artifactId>simple-jndi</artifactId>
+            <version>1.0.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/simple-jndi-1.0.0.jar</systemPath>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.kettle</groupId>
+            <artifactId>jsch-0.1.46</artifactId>
+            <version>0.1.45</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/jsch-0.1.54.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.kettle</groupId>
+            <artifactId>mysql-connector-java-bin</artifactId>
+            <version>5.1.49</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/mysql-connector-java-5.1.49-bin.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.kettle</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.49</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/mysql-connector-java-5.1.49.jar</systemPath>
+        </dependency>
+
+
+
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <repositories><!-- kettle中央仓库 -->
+        <repository>
+            <id>pentaho-public</id>
+            <name>Pentaho Public</name>
+            <url>http://nexus.pentaho.org/content/groups/omni</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                    <compilerArguments>
+                        <extdirs>WebRoot\WEB-INF\lib</extdirs>
+                        <bootclasspath>${java.home}/jre/lib/rt.jar;${java.home}/jre/lib/jce.jar;${java.home}/jre/lib/jsse.jar;${java.home}/jre/lib/ext/nashorn.jar</bootclasspath>
+                    </compilerArguments>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.3.7.RELEASE</version>
+                <configuration>
+                    <mainClass>com.kettle.mykettle.MykettleApplication</mainClass>
+                    <includeSystemScope>true</includeSystemScope>
+                    <fork>true</fork>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>repackage</id>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- resource插件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>
